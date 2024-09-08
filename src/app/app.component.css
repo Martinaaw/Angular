@@ -1,0 +1,22 @@
+.buttom{
+  cursor: pointer;
+  color: rgb(84, 39, 248);
+   font-size: 28px;
+   font-weight: 100;
+   width: fit-content;
+   font-style: none;
+   text-decoration: none;
+}
+
+.Nav li {
+  padding-left: 15px;
+  padding-top: 15px;
+}
+
+.Nav{
+    display: flex;
+    justify-content: space-around;
+    padding: 16px;
+    box-shadow: 0 5px 6px -4px rgb(38, 0, 255);
+  }
+

@@ -1,0 +1,10 @@
+@let producto = (producto$ | async);
+@if (!producto){
+    <p> Loading ... </p>
+}@else {
+    <p> {{producto.nombre}}</p>
+    <p>{{producto.detalles}}</p>
+    <p>{{producto.precio}}</p>
+}
+
+

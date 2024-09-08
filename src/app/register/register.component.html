@@ -1,0 +1,55 @@
+<p>¿Todavia no estas registrado?</p>
+
+<div class="form">
+
+    <form class="form-cnt"
+    [formGroup]="RegisterForm"
+    (submit)="handleSubmit()"
+    >
+        <div> 
+        <label for="nombre" class="Label-nombre" > Nombre </label>
+        <input type="text" 
+        id="nombre" 
+        formControlName="nombre" 
+        placeholder="Complete con tu nombre..." 
+        autocomplete="nombre">
+        </div>
+        <div class="alert-nombre"
+        [hidden]="nombre.valid || nombre.untouched"
+        >
+        Ingrese su nombre
+        </div>
+        <div>
+            <label for="apellido" class="Label-apellido" > Apellido </label>
+            <input type="text" 
+            id="apellido" 
+            formControlName="apellido" 
+            placeholder="Complete con su apellido..." 
+            autocomplete="apellido">
+        </div>
+        <div class="alert-apellido"
+        [hidden]="apellido.valid || apellido.untouched"
+        >
+        Ingrese su apellido
+        </div>
+        <div>
+            <label for="email" class="Label-email" > Email </label>
+            <input type="email" 
+            id="email" 
+            formControlName="email" 
+            placeholder="...@gmail.com" 
+            autocomplete="email">
+        </div>
+        <div class="alert-email"
+        [hidden]="email.valid || email.untouched"
+        >
+        Es necesario que ingrese con un email
+        </div>
+
+        <div>
+        <button type= "submit" class="form-btn"
+        [disabled]="RegisterForm.invalid"
+        >Confirmar</button>
+        </div>
+    </form>
+</div>
